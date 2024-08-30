@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#navbar {
+    transition: top 0.3s;
+    top: 0;
+    width: 100%;
+}
+
+
+ ul.navbar-nav{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+} 
+
+.logo-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.button-flex {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.jumbotron-custom {
+    background-color: #f8f9fa; /* Warna latar belakang */
+    padding: 3rem 2rem; /* Padding untuk jumbotron */
+    border-radius: 10px; /* Sudut melengkung */
+    text-align: center; /* Pusatkan teks */
+}
+
+.whatsapp-btn {
+    position: fixed; /* Membuat tombol tetap di tempat saat scroll */
+    bottom: 20px; /* Jarak dari bawah halaman */
+    right: 20px; /* Jarak dari sisi kiri halaman */
+    background-color: #25D366; /* Warna latar belakang tombol WhatsApp */
+    border-radius: 50%; /* Membuat tombol berbentuk bulat */
+    width: 80px; /* Ukuran tombol */
+    height: 80px; /* Ukuran tombol */
+    display: flex; /* Menggunakan Flexbox */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    justify-content: center; /* Menyelaraskan item secara horizontal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    z-index: 1000;
+    transition: all 0.3s ease; /* Transisi yang halus */
+    animation: move-up-down 3s infinite;
+}
+@keyframes move-up-down {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px); /* Menggeser tombol ke atas */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.whatsapp-btn i {
+    font-size: 2.5rem; /* Ukuran ikon */
+    color: white; /* Warna ikon */
+}
+
+
+.whatsapp-btn:hover {
+    opacity: 0.8;
+}
+
+.custom-text {
+    font-size: 0.875rem; /* Menyesuaikan ukuran font (misalnya, 14px) */
+    line-height: 1.5; /* Jarak antara baris teks */
+    width: 100%; /* Memastikan elemen menggunakan lebar penuh dari kontainer */
+    max-width: 300px; /* Membatasi lebar maksimal teks */
+    margin: 0 auto; /* Memusatkan teks jika lebar kurang dari kontainer */
+    text-align: left; /* Menyelaraskan teks ke kiri */
+}
+
+.see_more{
+    font-size: 0.85rem;
+}
+
+.see_more:hover{
+    font-weight: bold;
+}
+
+.nav-link-logo {
+    font-weight: bold; /* Membuat teks menjadi tebal */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+    margin-left: 30px;
+    margin-right: 30px;  
+}
+
+.link-footer {
+    margin-left: 20px; /* Jarak antara item menu */
+    margin-right: 20px; /* Jarak antara item menu */
+}
