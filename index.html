@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Klinik Kesehatan Medialys</title>
+    <link rel="icon" type="image/png" href="/assets/LOGO_MEDIALYS_ICON.png" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
@@ -14,6 +16,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  
   </head>
   <body>
      <!-- nav -->
@@ -25,96 +30,158 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link m-2" aria-current="page" href="#">Link 1</a>
+                            <a class="nav-link m-2 fw-semibold" aria-current="page" href="#">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link m-2" href="#section2">Link 2</a>
+                            <a class="nav-link m-2 fw-semibold" href="#Layanan-Kami">Layanan Kami</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link m-2" href="#section3">Link 3</a>
+                            <a class="nav-link m-2 fw-semibold" href="#section3">Dokter</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link m-2" href="#section4">Link 4</a>
+                            <a class="nav-link m-2 fw-semibold" href="#section3">Vaksin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2 fw-semibold" href="#section4">Tentang</a>
                         </li>
                     </ul>
                     <div class="mx-auto text-center fw-bold fs-3">
-                        Logo
+                       <img src="assets//LOGO_MEDIALYS-removebg.png" width="180" height="60" alt="">
                     </div>
                     <div class="button-flex">
-                        <button class="btn btn-dark" type="submit">Button</button>
+                        <button class="btn btn-success btn-contact" type="submit">Contact Us <i class="fa-solid fa-phone-flip "></i></button>
                     </div>
                 </div>
             </div>
         </nav>
       <!-- end nav -->
       
-       <div class="container">
+       <div class="container-fluid">
         <a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank">
             <i class="fa-brands fa-whatsapp text-white "></i>
         </a>
            <!-- jumbotron -->
-            <div class="row section-padding">
+            <div class="row mt-5">
+                <div class="col-md">
+                    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="hero d-flex justify-content-center align-items-center" style="height: 500px; height: 100vh; background: url('assets/ai-generated-8775433_1280.png') center/cover;">
+                                    <div class="text-center text-white">
+                                        <h1>Welcome to Our Service</h1>
+                                        <p>Delivering the best solutions for you</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="hero d-flex justify-content-center align-items-center" style="height: 500px; height: 100vh; background: url('assets/ai-generated-8775433_1280.png') center/cover;">
+                                    <div class="text-center text-white">
+                                        <h1>Custom Solutions</h1>
+                                        <p>Your vision, our mission</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="hero d-flex justify-content-center align-items-center" style="height: 500px; height: 100vh; background: url('assets/7openingceremony-scaled.jpg') center/cover;">
+                                    <div class="text-center text-white">
+                                        <h1>Innovative Ideas</h1>
+                                        <p>Creating value through innovation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Navigation buttons -->
+                        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+        
+            <!-- <div class="row section-padding hero">
                 <div class="col-md text-center mt-4">
-                    <div class="p-5 mb-4 bg-light rounded-3">
-                        <div class="container-fluid mt-5 py-5 animate__animated animate__zoomIn" data-aos="fade-down">
-                            <h1 class="display-5 fw-bold "  >Value Proposition!</h1>
-                            <p class="col-md fs-5 mt-3" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                    <div class="p-5 mb-4">
+                        <div class="container mt-5 py-5" >
+                            <h1 class="display-5 fw-bold text-white">Klinik Utama Medialys</h1>
+                            <p class="col-md fs-5" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                             <button class="btn btn-dark btn-md mt-3" type="button">Learn more</button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- end jumbotron -->
 
             <!-- section 2 -->
-            <div class="row mt-5 section-padding" id="section2"  style="min-height: 100vh; display: flex; align-items: right; justify-content: right;">
+            <div class="row mt-5 section-padding" id="Layanan-Kami"  style="min-height: 100vh; display: flex; align-items: right; justify-content: right;">
                 <div class="col-md">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12 mb-4 text-center"  data-aos="fade-up">
-                                <h1 class="display-5 fw-bold">Value Proposition!</h1>
-                                <span class="mt-3">“If you don’t try this app, you won’t become the superhero you were meant to be”</span>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12 mb-2 text-center"  data-aos="fade-up">
+                                    <h1 class="display-5 fw-bold">Layanan Kami</h1>
+                                    <span class="mt-1">“Selalu berikan pelayanan prima untuk kesehatan anda dan keluarga”</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center text-center mt-2" data-aos="fade-up">
+                                <div class="col-md-3 ">
+                                    <div class="card">
+                                        <img src="assets/konsul.png" height="150" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-2">Konsultasi Dokter</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 ms-5 me-5">
+                                    <div class="card">
+                                        <img src="assets/pngtree-drug-capsule-pill-from-prescription-in-drugstore-pharmacy-for-treatment-health-png-image_12466918.png" class="card-img-top" height="150" width="300" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-2">Farmasi</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img src="assets/hemodialisa.jpg" height="150" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-2">Hemodialisa</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                                <div class="row mt-3 justify-content-center text-center" data-aos="fade-up">
+                                    <div class="col-md-3" >
+                                        <div class="card">
+                                            <img src="assets/lab-3498584_1280.jpg" height="150" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-2">Laboratorium</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 ms-5 me-5" >
+                                        <div class="card">
+                                            <img src="assets/radiology.jpg" height="150" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-2">Radiology</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 " >
+                                        <div class="card">
+                                            <img src="assets/mcu.jpg" height="150" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-2">Medical Check Up</h5>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
-                        <div class="row mt-5 mb-5">
-                            <div class="col-md-3" data-aos="fade-up">
-                                <div class="card">
-                                    <img src="assets/black.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-4">Card title</h5>
-                                        <a href="#" class="text-decoration-none text-black see_more">See More ›</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3" data-aos="fade-up">
-                                <div class="card">
-                                    <img src="assets/black.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-4">Card title</h5>
-                                        <a href="#" class="text-decoration-none text-black see_more">See More ›</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3" data-aos="fade-up">
-                                <div class="card">
-                                    <img src="assets/black.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-4">Card title</h5>
-                                        <a href="#" class="text-decoration-none text-black see_more">See More ›</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3" data-aos="fade-up">
-                                <div class="card">
-                                    <img src="assets/black.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-4">Card title</h5>
-                                        <a href="#" class="text-decoration-none text-black see_more">See More ›</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- end section 2 -->
@@ -264,49 +331,62 @@
 
         <!-- footer -->
     <!-- Footer 6 - Bootstrap Brain Component -->
-<footer class="footer" >
+<footer class="footer" data-aos="fade-up" >
 
     <!-- Widgets - Bootstrap Brain Component -->
     <div class="bg-light py-1 py-md-5 py-xl-12 border-top border-light-subtle">
         <div class="container">
-            <div class="row " data-aos="fade-up" style="margin-left: 7.4rem;">
-                <div class="col-md-5">
-                    <h4 class="fw-bold">Ready to get started?</h4>
-                    <h4 class="fw-normal">Sign up or contact us</h4>
+            <div class="row"  style="margin-left: 7.4rem;">
+                <div class="col-md-6">
+                    <h4 class="fw-bold">Punya pertanyaan?</h4>
+                    <h4 class="fw-normal">Kami siap membantu Anda</h4>
+                    <div class="text-center" style="width: 250px;">
+                        <a class="btn btn-success btn-contact d-flex align-items-center justify-content-center">
+                            <i class="fa-brands fa-whatsapp fs-2 me-2"></i> 
+                            <span>Chat Via WhatsApp</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-6 mt-3">
-                    <a class="btn btn-dark me-3">Start free trial</a>
-                    <a class="btn btn-outline-dark">Contact Us</a>
+                <div class="col-md-6">
+                    <h4 class="fw-normal" style="margin-top: 38px;">Tetap terhubung dengan Kami</h4>
+                    <div class="d-flex">
+                    <div class="text-center me-2" style="width: 150px;">
+                        <a class="btn btn-medialys btn-contact d-flex align-items-center justify-content-center">
+                            <i class="fa-brands fa-instagram fw-bold fs-4 me-2"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
                 </div>
             </div>
-            <div class="row text-center mt-5 me-4" data-aos="fade-up">
-                <div class="col-md">
-                    <ul class="nav justify-content-center ">
+            <div class="row text-center mt-5">
+                <div class="col-md-12 me-5">
+                    <ul class="nav justify-content-center">
                         <li class="nav-item link-footer">
-                            <a class="nav-link text-decoration-none text-black" href="#!">Product</a>
+                            <a class="nav-link text-decoration-none text-black" href="#!">Beranda</a>
                         </li>
                         <li class="nav-item link-footer">
-                            <a class="nav-link text-decoration-none text-black" href="#!">Features</a>
-                        </li>
-                        <li class="nav-item link-footer">
-                            <a class="nav-link text-decoration-none text-black" href="#!">Resources</a>
+                            <a class="nav-link text-decoration-none text-black" href="#!">Layanan Kami</a>
                         </li>
                         <li class="nav-item nav-link-logo">
-                            <a class="nav-link text-black" href="#!">Logo</a>
+                            <div>
+                                <img src="assets//LOGO_MEDIALYS-removebg.png" style="margin-top: -5px;"  width="150" height="50" alt="">
+                            </div>
                         </li>
                         <li class="nav-item link-footer">
-                            <a class="nav-link text-decoration-none text-black" href="#!">About</a>
+                            <a class="nav-link text-decoration-none text-black" href="#!">Dokter</a>
                         </li>
                         <li class="nav-item link-footer">
-                            <a class="nav-link text-decoration-none text-black" href="#!">Blog</a>
-                        </li>
-                        <li class="nav-item link-footer">
-                            <a class="nav-link text-decoration-none text-black" href="#!">Support</a>
+                            <a class="nav-link text-decoration-none text-black" href="#!">Tentang</a>
                         </li>
                     </ul>
                 </div>
+                <div class="col-md-12 mt-5 text-center">
+                      <span>504D, Jl. Letjen Suprapto No.504C, Cemp. Putih Bar., Kec. Johar Baru, Daerah Khusus Ibukota Jakarta 10530</span><br><br>
+                      <span>&copy; 2024. Privacy — Terms.</span>
+                </div>
             </div>
-            <div class="row  mt-5" data-aos="fade-up">
+            <!-- <div class="row  mt-5" data-aos="fade-up">
                 <hr>
                 <div class="col-md-12 text-center">
                     <ul class="nav justify-content-center">
@@ -321,17 +401,11 @@
                         </li>
                         </ul>
                 </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                  <div class=" text-center">
-                    &copy; 2024. Privacy — Terms.
-                  </div>
-                </div>
-              </div>
+            </div> -->
+               
         </div>
     </div>
-  </footer>
+</footer>
          <!-- end footer -->
     
     <script>
@@ -359,6 +433,14 @@
         duration: 1000, // Durasi animasi dalam milidetik
         once: false
       });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
     </script>
   </body>
 </html>
