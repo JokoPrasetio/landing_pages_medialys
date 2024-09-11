@@ -23,17 +23,34 @@ html {
 
 
  ul.navbar-nav{
-    flex: 1;
     display: flex;
     justify-content: flex-start;
 } 
+.navbar-nav .nav-item .nav-text{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-.logo-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.navbar-nav .nav-item .nav-text {
+    position: relative;
+    padding-bottom: 8px; /* Menambahkan ruang di bawah teks untuk border */
+}
+
+.navbar-nav .nav-item .nav-text::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Mulai dari posisi kiri */
+    width: 0%; /* Awalnya border tidak terlihat (lebar 0%) */
+    height: 2px; /* Ketebalan border */
+    background-color: #000; /* Warna border */
+    border-radius: 20px;
+    transition: all 0.3s ease; /* Transisi yang halus */
+}
+
+.navbar-nav .nav-item .nav-text:hover::before {
+    width: 100%; /* Perluas border hingga penuh */
 }
 
 .button-flex {
@@ -64,7 +81,9 @@ html {
     background-image: url('assets/welcome.jpg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
+    width: 100vw;
 }
 .row .overlay-hero{
     position: absolute;
@@ -80,7 +99,7 @@ html {
     z-index: 2;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.132);
 }
-.hero div button{
+.hero div a{
     position: absolute;
     margin-left: 3rem;
     margin-top: 17.9rem;
@@ -89,6 +108,49 @@ html {
 .sub_layanan{
     margin-top: 8.5rem;
     border-radius: 20px;
+}
+.sub_layanan:hover{
+    border-radius: 20px;
+    background-color: rgb(214, 49, 49);
+}
+.section-dokter{
+    background-color: #009537;
+}
+.overlay-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Warna latar belakang semi-transparan */
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-dokter:hover .overlay-name {
+    opacity: 1; /* Tampilkan nama dokter saat gambar di-hover */
+}
+
+.card-package{
+    height: 520;
+}
+.card-service{
+}
+.card-service img{
+    height:200px;
+
+}
+#LayananVaksin img{
+    height: 210px;
+}
+/* Agar card dan teks overlay berada di posisi yang benar */
+.card-dokter {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 @keyframes move-up-down {
     0% {
@@ -135,15 +197,163 @@ html {
     margin-right: 30px;
 }
 
-.link-footer {
-    margin-left: 20px; /* Jarak antara item menu */
-    margin-right: 20px; /* Jarak antara item menu */
+
+.btn-contact {
+    border-radius: 50px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Adjust padding */
 }
 
-.btn-contact{
-    border-radius: 16px;
-}
+
+
+
+
 .btn-medialys{
     background-color: rgb(214, 49, 49);
     color: white;
+}
+.back i span:hover {
+    transform: translateX(5px); /* Memindahkan teks "Kembali" sedikit ke kanan */
+    transition: transform 0.3s ease; /* Menambahkan efek transisi halus */
+}
+
+.back i {
+    transition: transform 0.3s ease; /* Efek transisi untuk ikon */
+}
+
+.back i :hover {
+    transform: translateX(-5px); /* Memindahkan ikon sedikit ke kiri saat di-hover */
+}
+
+.map-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #ccc;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.footer-social{
+    margin-top: 2.5rem;
+}
+.footer-social a{
+    margin-top: 10px;
+}
+.footer-contact{
+    width: 50%;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .navbar .button-flex button{
+        display: none;
+    }
+    #LayananVaksin h1{
+        font-size: 1.4rem;
+    }
+    #LayananVaksin span{
+        font-size: 0.9rem;
+    }
+    #LayananVaksin img{
+        height: 180px;
+    }
+    #LayananVaksin h5{
+        font-size: 1rem;
+    }
+    #LayananVaksin .btn-contact {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    #TentangKami h1{
+        font-size: 1.4rem;
+    }
+    #TentangKami img{
+        height: 180px;
+    }
+    #TentangKami p{
+        font-size: 0.95rem;
+    }
+    #TentangKami h4{
+        font-size: 1.2rem;
+    }
+    #TentangKami span{
+        font-size: 0.95rem;
+    }
+    #Alamat h2{
+        font-size: 1.2rem;
+    }
+    .sub_layanan{
+        margin-top:6rem;
+        font-size: 0.85rem;
+        border-radius: 20px;
+        padding: 5px;
+        
+    }
+    .sub_layanan:hover{
+        border-radius: 20px;
+        background-color: rgb(214, 49, 49);
+    }
+    .whatsapp-btn {
+        width: 60px; /* Ukuran lebih kecil untuk mobile */
+        height: 60px; /* Ukuran lebih kecil untuk mobile */
+        bottom: 15px; /* Jarak dari bawah sedikit lebih kecil */
+        right: 15px; /* Jarak dari sisi kanan sedikit lebih kecil */
+    }
+
+    .whatsapp-btn i {
+        font-size: 24px; /* Ukuran ikon lebih kecil */
+    }
+    .btn-product{
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+  
+    .card-package{
+        height: 520;
+    }
+
+    .card-service img{
+        height:150px;
+    }
+    .footer{
+        margin-top: 20px;
+    }
+    .footer-contact{
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .footer-question{
+        margin-top: 20px;
+    }
+    .footer-question h4{
+       font-size: 1.2rem;
+       margin-left: 20px;
+    }
+    .footer-question .footer-contact{
+        margin-left: 20px;
+    }
+    .footer-social h4{
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+    .footer-social a{
+        margin-left: 20px;
+    }
+    
 }
