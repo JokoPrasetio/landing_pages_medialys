@@ -203,7 +203,10 @@ html {
     padding: 10px 20px; /* Adjust padding */
 }
 
-
+.btn-product{
+    font-size: 0.95rem;
+    padding: 8px;
+}
 
 
 
@@ -319,8 +322,8 @@ html {
         font-size: 24px; /* Ukuran ikon lebih kecil */
     }
     .btn-product{
-        font-size: 0.95rem;
-        padding: 10px;
+        font-size: 0.85rem;
+        padding: 6px;
     }
   
     .card-package{
